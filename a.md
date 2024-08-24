@@ -1,0 +1,29 @@
+### Topics
+
+- [ ] **Solving a System of Linear Equations (SLE) in a Traffic Network**
+- [ ] **Finding Elementary Matrices**
+  - Simple case: 2x2 matrices
+  - Using elementary matrices to find the inverse of a matrix
+- [ ] **Finding Determinant Using Row Operations**
+  - Example: Second row [a b c] changes to [-a+66 -b+66 -c+66]
+- [ ] **Determinant of Composite Matrices**
+  - Example: \(\det(6 A^2 B^{-1}C^t \text{Adj}(C))\)
+- [ ] **Finding the Inverse of a Matrix from an Equation**
+- [ ] **Isolating a Matrix \(X\) from an Equation**
+- [ ] **Graphing Sum and Multiple of Vectors**
+  - In \(\mathbb{R}^2\)
+- [ ] **Conditions for a Parameter to Ensure Linear Independence**
+  - Example: Condition for parameter to have at least one solution in SLE
+- [ ] **Equation of a Plane**
+- [ ] **Equation of a Line**
+- [ ] **Area Using Cross Product**
+- [ ] **Distance Between a Line and a Plane**
+- [ ] **Projection Formula**
+- [ ] **Condition for Closure Under Addition and Multiplication in Vector Spaces**
+- [ ] **Basis of \(\text{span}\{u_1, u_2, u_3, u_4, \ldots, u_r\}\)**
+  - Viewing vectors as columns of a matrix and working with the column space
+- [ ] **Expression (Coordinates) of a Vector in a Basis**
+- [ ] **Dimension and Basis for Subspaces**
+  - Solving SLE and identifying leading and free variables
+- [ ] **Theorem of Nullity**
+  - \(\text{nullity}(A) + \text{rank}(A) = \text{number of columns in } A\)
