@@ -1,14 +1,11 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-
 interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
-  tag: string[];
   gitUrl: string;
   previewUrl: string;
 }
@@ -19,70 +16,62 @@ const projectsData: Project[] = [
     title: "React Portfolio Website",
     description: "Project 1 description",
     image: "/imgs/VIVID_VICE.jpg",
-    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Photography Portfolio Website",
+    title: "Tenkesalja Animal Welfare Protection Association Website",
     description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/imgs/VIVID_VICE.jpg",
+    gitUrl: "https://github.com/SaqibAhmadSyed/tenkesaljaallatvedok",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Transportation Api",
     description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Ecommerce Application",
     description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
+    title: "Network Address Translation (NAT) Implementation (GNS3 + VM)",
     description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
+    title: "Penetration Testing (Capture the Flag)",
     description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    image: "/imgs/VIVID_VICE.jpg",
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "Bank Account Management System",
+    description: "Project 5 description",
+    image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection: React.FC = () => {
-  const [tag, setTag] = useState<string>("All");
-  const ref = useRef<HTMLUListElement>(null);
-  const inViewRef = useRef<HTMLUListElement>(null);
+  const inViewRef = React.useRef<HTMLUListElement>(null);
   const inView = useInView(inViewRef, { once: true });
-
-  const handleTagChange = (newTag: string) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -90,46 +79,31 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+    <section id="projects" className="container mx-auto px-12 ">
+      <div className="relative z-10">
+        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+          My Projects
+        </h2>
+        <ul ref={inViewRef} className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {projectsData.map((project, index) => (
+            <motion.li
+              key={project.id}
+              variants={cardVariants}
+              initial="initial"
+              animate={inView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.4 }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
-      <ul ref={inViewRef} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={project.id}
-            variants={cardVariants}
-            initial="initial"
-            animate={inView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
     </section>
   );
 };
