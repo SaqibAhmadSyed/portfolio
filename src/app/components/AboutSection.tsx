@@ -2,6 +2,13 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import {
+  IconBrandReact, IconBrandNodejs, IconBrandTailwind,
+  IconBrandUnity, IconDatabase, IconShieldLock, IconNetwork,
+  IconBrandJavascript, IconCoffee, IconBrandCSharp, IconBrandPhp,
+  IconApi, IconBrandPython, IconTerminal2, IconBrandGit 
+}
+  from "@tabler/icons-react";
 
 type TabData = {
   title: string;
@@ -14,27 +21,70 @@ const TAB_DATA: TabData[] = [
     title: "Skills",
     id: "skills",
     content: (
-    <ul className="grid grid-cols-2 list-disc pl-4">
-      <li>SQL</li>
-      <li>Ethical Hacking</li>
-      <li>Network</li>
-      <li>JavaScript</li>
-      <li>Java</li>
-      <li>C#</li>
-      <li>PHP</li>
-      <li>RestAPI</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>problem solving</li>
-      
-    </ul>
-
+      <div className="grid grid-cols-3">
+        <div>
+          <ul className="pl-4">
+            <li className="flex items-center space-x-2">
+              <IconDatabase stroke={1.5} color="#38bdff" size={22} />
+              <span className="ml-2">SQL</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconShieldLock stroke={1.5} color="#3898ff" size={22} />
+              <span className="ml-2">Ethical Hacking</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconNetwork stroke={1.5} color="#7fe34d" size={22} />
+              <span className="ml-2">Network</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconTerminal2 stroke={1.5} color="orange" size={22} />
+              <span className="ml-2">Linux</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className="pl-4">
+            <li className="flex items-center space-x-2">
+              <IconBrandJavascript stroke={1.5} color="#e1f013" size={22} />
+              <span className="ml-2">JavaScript</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconCoffee stroke={1.5} color="#d12a2a" size={22} />
+              <span className="ml-2">Java</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandCSharp stroke={3} color="#7d1485" size={22} />
+              <span className="ml-2">C#</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandGit  stroke={1.5} color="#e63212" size={22} />
+              <span className="ml-2">Git</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className="pl-4">
+            <li className="flex items-center space-x-2">
+              <IconBrandPhp stroke={1.5} color="#8361f2" size={22} />
+              <span className="ml-2">PHP</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconApi stroke={1.5} color="#e612c9" size={22} />
+              <span className="ml-2">RestAPI</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandPython stroke={1.5} color="white" size={22} />
+              <span className="ml-2">Python</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
-    content: (
+    content: (      
       <div>
         <h3 className="text-lg font-semibold">Computer Science and Tecnhology (DEC)</h3>
         <p>Vanier College, 2024</p>
@@ -42,10 +92,63 @@ const TAB_DATA: TabData[] = [
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Course Taken",
+    id: "course",
     content: (
-      <h3 className="text-lg font-semibold">Coming Soon</h3>
+      <ul className="grid grid-cols-2 list-disc ml-8">
+        <li>Programming (OOP/Data Structure)</li>
+        <li>Database</li>
+        <li>Game Programming</li>
+        <li>App Development (Desktop/Mobile)</li>
+        <li>Web Programming</li>
+        <li>Networks</li>
+        <li>System Development</li>
+        <li>E-Commerce</li>
+        <li>Internet of Things</li>
+        <li>Web Service</li>
+        <li>Ethical Hacking</li>
+        <li>Unix</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Frameworks",
+    id: "frameworks",
+    content: (
+      <div className="grid grid-cols-2">
+        <div>
+          <ul className="pl-4">
+            <li className="flex items-center space-x-2">
+              <IconBrandReact stroke={1.5} color="#38bdff" size={22} />
+              <span className="ml-2">React.js</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandTailwind stroke={1.5} color="#3898ff" size={22} />
+              <span className="ml-2">Tailwind CSS</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandNodejs stroke={1.5} color="#7fe34d" size={22} />
+              <span className="ml-2">Node.js</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className="pl-4">
+            <li className="flex items-center space-x-2">
+              <IconBrandUnity stroke={1.5} color="white" size={22} />
+              <span className="ml-2">Unity Game Engine</span>
+            </li>
+            {/* <li className="flex items-center space-x-2">
+              <IconBrandTailwind stroke={1.5} color="#3898ff" size={22} />
+              <span className="ml-2">Tailwind CSS</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandNodejs stroke={1.5} color="#7fe34d" size={22} />
+              <span className="ml-2">Node.js</span>
+            </li> */}
+          </ul>
+        </div>
+      </div>
     ),
   },
 ];
@@ -63,14 +166,14 @@ const AboutSection: React.FC = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <Image
-        src="/imgs/workstation.jpg"
-        width={800}
-        height={800}
-        alt="About me"
-        layout="intrinsic"
-        className="mr-5"
-      />
+        <Image
+          src="/imgs/workstation.jpg"
+          width={800}
+          height={800}
+          alt="About me"
+          layout="intrinsic"
+          className="mr-5"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full py-5">
           <h2 className="text-4xl font-bold text-white mb-4 ">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -89,19 +192,25 @@ const AboutSection: React.FC = () => {
               Skills
             </TabButton>
             <TabButton
+              selectTab={() => handleTabChange("frameworks")}
+              active={tab === "frameworks"}
+            >
+              Frameworks
+            </TabButton>
+            <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
               Education
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("course")}
+              active={tab === "course"}
             >
-              Certifications
+              Course Taken
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className="mt-4">
             {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>

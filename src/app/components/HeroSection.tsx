@@ -28,14 +28,12 @@ function HeroSection() {
   return (
     <section className="lg:py-1">
       <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left lg:pr-[20rem]">
-          <h1 className="text-white mb-4 text-4xl lg:text-8xl font-extrabold">
+        <div className="col-span-5 place-self-center text-center sm:text-left lg:pr-[8rem]">
+          <h1 className="text-white mb-4 text-4xl lg:text-7xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Hello, I'm <br /> </span>
             <span>Saqib</span>
           </h1>
-          <p className="text-[#adb7be] text-base sm:text-lg lg:text-xl mb-6">
-            welcome to my portfolio website
-          </p>
+          <p className="text-[#adb7be] text-base sm:text-lg lg:text-xl mb-6">welcome to my portfolio website</p>
           <div>
             <button className="px-1 py-1 rounded-full w-full sm:w-fit mr-4 transition ease-in-out
              bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 mt-3 hover:-translate-y-1">
@@ -43,8 +41,8 @@ function HeroSection() {
             </button>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0 relative">
-          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
+        <div className="col-span-2 place-self-center mt-4 lg:mt-0 relative">
+          <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]">
             <Image
               src={"/imgs/panda.gif"}
               alt="panda"
@@ -53,6 +51,33 @@ function HeroSection() {
               className="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
             />
           </div>
+        </div>
+        <div className="col-span-5 place-self-center sm:text-left lg:pl-[10rem] pt-10">
+        <h1 className="text-white mb-4 text-4xl lg:text-7xl font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">        
+            <TypeAnimation
+              sequence={[
+                'Problem Solver',
+                1000, 
+                'Fast Learner',
+                1000,
+                'Adaptable',
+                1000,
+                'Communicator',
+                1000,
+                'Teamwork',
+                1000,
+                'Open-Minded',
+                1000,
+                'Detail-Oriented',
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </span>
+          </h1>
         </div>
       </div>
     </section>

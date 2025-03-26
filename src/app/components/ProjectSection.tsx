@@ -7,25 +7,22 @@ interface Project {
   description: string;
   image: string;
   gitUrl: string;
-  previewUrl: string;
 }
 
 const projectsData: Project[] = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "Website to showcase more about me and display my experience and projects",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 2,
     title: "Tenkesalja Animal Welfare Protection Association Website",
-    description: "Project 2 description",
+    description: "Website to connect non-profit hungarian shelter to volunteers and give detailed explanation on how to adopt new animals",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "https://github.com/SaqibAhmadSyed/tenkesaljaallatvedok",
-    previewUrl: "/",
   },
   {
     id: 3,
@@ -33,7 +30,6 @@ const projectsData: Project[] = [
     description: "Project 3 description",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 4,
@@ -41,15 +37,13 @@ const projectsData: Project[] = [
     description: "Project 4 description",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 5,
-    title: "Network Address Translation (NAT) Implementation (GNS3 + VM)",
-    description: "Authentication and CRUD operations",
+    title: "Network Address Translation Home Lab",
+    description: "Used virtual machine to simulate a real network environment with clients and server which includes active directory, ftp, dns, dhcp and IIS",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 6,
@@ -57,7 +51,6 @@ const projectsData: Project[] = [
     description: "Project 5 description",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 7,
@@ -65,8 +58,14 @@ const projectsData: Project[] = [
     description: "Project 5 description",
     image: "/imgs/VIVID_VICE.jpg",
     gitUrl: "/",
-    previewUrl: "/",
   },
+  {
+    id: 8,
+    title: "Undead Desolation: FPS Game",
+    description: "Fps game made in Unity Engine in a team of 5. The goal of the game is to kill zombies and traverse the map",
+    image: "/imgs/id8.png",
+    gitUrl: "https://github.com/SaqibAhmadSyed/ZombieFPSGame",
+  }
 ];
 
 const ProjectsSection: React.FC = () => {
@@ -79,12 +78,12 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="container mx-auto px-12 ">
+    <section id="projects">
       <div className="relative z-10">
         <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
           My Projects
         </h2>
-        <ul ref={inViewRef} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <ul ref={inViewRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
             <motion.li
               key={project.id}
@@ -98,7 +97,6 @@ const ProjectsSection: React.FC = () => {
                 description={project.description}
                 imgUrl={project.image}
                 gitUrl={project.gitUrl}
-                previewUrl={project.previewUrl}
               />
             </motion.li>
           ))}
