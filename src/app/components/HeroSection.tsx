@@ -3,24 +3,24 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import DownloadButton from "./DownloadButton";
+import { IconBrandGithub, IconBrandLinkedinFilled, IconMailFilled } from "@tabler/icons-react";
 
 
 <TypeAnimation
-sequence={[
-  'Qibber',
-  1000, 
-  'Nigqib',
-  1000,
-  'Saqueef',
-  1000,
-  'Queefqib',
-  1000
-]}
-wrapper="span"
-speed={50}
-repeat={Infinity}
+  sequence={[
+    'Qibber',
+    1000,
+    'Nigqib',
+    1000,
+    'Saqueef',
+    1000,
+    'Queefqib',
+    1000
+  ]}
+  wrapper="span"
+  speed={50}
+  repeat={Infinity}
 />
 
 
@@ -33,12 +33,19 @@ function HeroSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Hello, I'm <br /> </span>
             <span>Saqib</span>
           </h1>
-          <p className="text-[#adb7be] text-base sm:text-lg lg:text-xl mb-6">welcome to my portfolio website</p>
-          <div>
-            <button className="px-1 py-1 rounded-full w-full sm:w-fit mr-4 transition ease-in-out
-             bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 mt-3 hover:-translate-y-1">
-              <span className="block bg-[#121212] text-white rounded-full px-5 py-2">Download CV</span>
-            </button>
+          <p className="text-[#adb7be] text-base sm:text-lg lg:text-xl mb-2">welcome to my portfolio website</p>
+          <div className="inline-grid grid-cols-1">
+            <DownloadButton />
+            <a href="https://github.com/SaqibAhmadSyed" target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center justify-center gap-1 px-5 py-2 rounded-full w-full sm:w-[200px] mr-4 transition ease-in-out bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 mt-3 text-white hover:-translate-y-1">
+                <IconBrandGithub className="text-white" size={20} /> Github
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/in/saqib-ahmad-syed-8a6a45237/" target="_blank" rel="noopener noreferrer">
+              <button className="flex items-center justify-center gap-2 px-5 py-2 rounded-full w-full sm:w-[200px] mr-4 transition ease-in-out bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 mt-3 text-white hover:-translate-y-1">
+                <IconBrandLinkedinFilled className="text-white" size={20} /> LinkedIn
+              </button>
+            </a>
           </div>
         </div>
         <div className="col-span-2 place-self-center mt-4 lg:mt-0 relative">
@@ -53,30 +60,30 @@ function HeroSection() {
           </div>
         </div>
         <div className="col-span-5 place-self-center sm:text-left lg:pl-[10rem] pt-10">
-        <h1 className="text-white mb-4 text-4xl lg:text-7xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">        
-            <TypeAnimation
-              sequence={[
-                'Problem Solver',
-                1000, 
-                'Fast Learner',
-                1000,
-                'Adaptable',
-                1000,
-                'Communicator',
-                1000,
-                'Teamwork',
-                1000,
-                'Open-Minded',
-                1000,
-                'Detail-Oriented',
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </span>
+          <h1 className="text-white mb-4 text-4xl lg:text-7xl font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">
+              <TypeAnimation
+                sequence={[
+                  'Problem Solver',
+                  1000,
+                  'Fast Learner',
+                  1000,
+                  'Adaptable',
+                  1000,
+                  'Communicator',
+                  1000,
+                  'Teamwork',
+                  1000,
+                  'Open-Minded',
+                  1000,
+                  'Detail-Oriented',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
         </div>
       </div>

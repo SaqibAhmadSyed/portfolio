@@ -207,7 +207,7 @@ const AboutSection: React.FC = () => {
               selectTab={() => handleTabChange("course")}
               active={tab === "course"}
             >
-              Course Taken
+              Courses
             </TabButton>
           </div>
           <div className="mt-4">
