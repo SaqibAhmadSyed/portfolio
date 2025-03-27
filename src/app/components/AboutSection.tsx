@@ -171,7 +171,6 @@ const AboutSection: React.FC = () => {
           width={800}
           height={800}
           alt="About me"
-          layout="intrinsic"
           className="mr-5"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full py-5">

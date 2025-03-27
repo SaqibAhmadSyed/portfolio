@@ -8,7 +8,7 @@ import {
 } from "motion/react";
 import { cn } from "../utils/cn";
 import Link from "next/link";
-import { IconHome, IconLayersSubtract, IconUser } from "@tabler/icons-react";
+import { IconHome, IconLayersSubtract, IconUser, IconMessage } from "@tabler/icons-react";
 
 export const Navbar = ({ className }: { className?: string }) => {
   const navItems = [
@@ -28,6 +28,12 @@ export const Navbar = ({ className }: { className?: string }) => {
       name: "Projects",
       link: "#projects",
       icon: <IconLayersSubtract className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      isScroll: true,
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
       isScroll: true,
     },
   ];
