@@ -1,46 +1,53 @@
 import React from "react";
 import emailjs from '@emailjs/browser'
-import { Toaster, toast } from 'sonner'
-import { GlobeComponent } from "./GlobeComponent";
-
 
 const ContactSection: React.FC = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const form = e.currentTarget as HTMLFormElement;
+
         emailjs
             .sendForm(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Your EmailJS service ID
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Your EmailJS template ID
                 form,
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Your EmailJS public key
             )
             .then(
                 (result) => {
-                    toast.success("Message Sent Successfully!", {
-                        description: "Thank you for your message. I will get back to you ASAP!",
-                    });
-                    form.reset();
+                    console.log("Email sent successfully:", result.text);
+                    // Optional: Add user feedback (e.g., success message)
+                    alert("Message sent successfully!");
                 },
                 (error) => {
-                    toast.error("Oopsie, Something went Wrong!", {
-                        description: "Please try again or check your connection.",
-                    });
+                    console.error("Email sending failed:", error.text);
+                    // Optional: Add error handling
+                    alert("Failed to send message. Please try again.");
                 }
             );
+
+        form.reset();
     };
 
     return (
         <section
             id="contact"
-            className="grid md:grid-cols-2 my-12 md:my-6 pt-24 gap-4 relative"
+            className="grid md:grid-cols-2 my-12 md:my-12 pt-24 gap-4 relative"
         >
-            <div className="z-10 ">
-                <GlobeComponent />
+            <div className="bg-[radial-gradient(ellipse_at_center,_#fa8537,_transparent)] rounded-full h-96 w-96 z-0 blur-xl absolute top-3/4 -left-20 transform -translate-x-1/2 translate-y-1/8"></div>
+            <div className="z-10">
+                <h5 className="text-5xl font-bold text-white my-6">
+                    Let&apos;s Connect
+                </h5>
+                <p className="text-[#ADB7BE] mb-4 max-w-md">
+                    I&apos;m currently looking for new opportunities, my inbox is always
+                    open. Whether you have a question or just want to say hi, I&apos;ll
+                    try my best to get back to you!
+                </p>
             </div>
             <div>
-                <form className="flex flex-col my-20" onSubmit={handleSubmit}>
+                <form className="flex flex-col" onSubmit={handleSubmit}>
                     <div className="mb-6">
                         <label
                             htmlFor="name"
