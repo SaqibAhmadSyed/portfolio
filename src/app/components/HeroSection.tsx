@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import DownloadButton from "./DownloadButton";
-import { IconBrandGithub, IconBrandLinkedinFilled, IconMailFilled } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedinFilled } from "@tabler/icons-react";
 
 
 <TypeAnimation
@@ -55,6 +55,7 @@ function HeroSection() {
               alt="panda"
               width={0}
               height={0}
+              unoptimized
               className="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
             />
           </div>

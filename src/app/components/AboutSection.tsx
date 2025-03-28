@@ -155,7 +155,7 @@ const TAB_DATA: TabData[] = [
 
 const AboutSection: React.FC = () => {
   const [tab, setTab] = useState<string>("skills");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id: string) => {
     startTransition(() => {
@@ -171,7 +171,6 @@ const AboutSection: React.FC = () => {
           width={800}
           height={800}
           alt="About me"
-          layout="intrinsic"
           className="mr-5"
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full py-5">
@@ -180,9 +179,11 @@ const AboutSection: React.FC = () => {
             A recent Computer Science graduate with a strong passion for cybersecurity and Software Development.
             My academic journey has equipped me with
             a solid foundation in network security, programming and ethical hacking.
+            I have a strong foundation in network security, programming, and ethical hacking. I am passionate about building secure systems,
+            solving problems, and understanding the intricacies of software development to create efficient and reliable applications.
             Throughout my journey in college, I went through many challenges and I had the opportunity
-            to have on hands unique experience such as pentesting, build web apps, etc.
-            I’m excited to contribute my skills to a dynamic environment where I can make a meaningful impact.
+            to have on hands unique experience such as pentesting, build web apps, create various softwares, etc.
+            I am excited to contribute my skills to a dynamic environment where I can make a meaningful impact.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

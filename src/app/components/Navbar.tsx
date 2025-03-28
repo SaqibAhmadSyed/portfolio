@@ -8,7 +8,7 @@ import {
 } from "motion/react";
 import { cn } from "../utils/cn";
 import Link from "next/link";
-import { IconHome, IconLayersSubtract, IconUser } from "@tabler/icons-react";
+import { IconHome, IconLayersSubtract, IconUser, IconMessage } from "@tabler/icons-react";
 
 export const Navbar = ({ className }: { className?: string }) => {
   const navItems = [
@@ -30,6 +30,12 @@ export const Navbar = ({ className }: { className?: string }) => {
       icon: <IconLayersSubtract className="h-4 w-4 text-neutral-500 dark:text-white" />,
       isScroll: true,
     },
+    {
+      name: "Contact",
+      link: "#contact",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      isScroll: true,
+    },
   ];
 
   const { scrollYProgress } = useScroll();
@@ -37,7 +43,7 @@ export const Navbar = ({ className }: { className?: string }) => {
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
       } else {

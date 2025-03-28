@@ -1,8 +1,6 @@
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../components/3d-card";
-import Link from "next/link"
+import { CardBody, CardContainer, CardItem } from "./3d-card";
 import Image from "next/image";
-import {IconCode } from "@tabler/icons-react";
 
 interface ProjectCardProps {
   imgUrl: string;
@@ -14,7 +12,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl }) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-[#fff1e8] relative group/card border-black/[0.1] w-auto sm:w-[28rem] h-auto rounded-lg p-6 border">
+      <CardBody className="bg-[#faf3ed] relative group/card border-black/[0.1] w-[28rem] h-auto sm:w-[28rem] sm:h-auto rounded-lg p-6 border">
         <CardItem
           translateZ="40"
           className="text-xl font-semibold text-black"

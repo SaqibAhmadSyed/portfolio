@@ -13,7 +13,7 @@ type TabButtonProps = {
   darkMode?: boolean; // Optional prop for dark mode
 };
 
-const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children, darkMode = false }) => {
+const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   return (
