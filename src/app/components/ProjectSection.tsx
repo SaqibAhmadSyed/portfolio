@@ -16,7 +16,7 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Website built with TypeScript React to showcase my experience and projects.",
+    description: "Website built with Next.js, TypeScript and React to showcase my experience and projects.",
     image: "/imgs/id1.png",
     gitUrl: "https://github.com/SaqibAhmadSyed/portfolio",
     category: "Web Development",
@@ -32,9 +32,9 @@ const projectsData: Project[] = [
   {
     id: 3,
     title: "Transportation API",
-    description: "A Montreal STM API with logging, versioning, caching and commmon API calls.",
+    description: "Team leader of a php project built on agile about a Montreal public transport (STM) API. Features logging, versioning, caching and commmon API calls.",
     image: "/imgs/id3.png",
-    gitUrl: "/",
+    gitUrl: "https://github.com/SaqibAhmadSyed/transportation-api",
     category: "Software Development",
   },
   {
@@ -64,9 +64,9 @@ const projectsData: Project[] = [
   {
     id: 7,
     title: "Bank Account Management System",
-    description: "A financial application handling user accounts and transactions.",
+    description: "A Java financial/banking application handling user accounts and common banking operations.",
     image: "/imgs/id7.png",
-    gitUrl: "/",
+    gitUrl: "https://github.com/SaqibAhmadSyed/ProgPattern-Project",
     category: "Software Development",
   },
   {

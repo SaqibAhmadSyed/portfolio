@@ -3,10 +3,10 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import {
-  IconBrandReact, IconBrandNodejs, IconBrandTailwind,
+  IconBrandReact, IconBrandNodejs, IconBrandTailwind, IconBrandNextjs,
   IconBrandUnity, IconDatabase, IconShieldLock, IconNetwork,
   IconBrandJavascript, IconCoffee, IconBrandCSharp, IconBrandPhp,
-  IconApi, IconBrandPython, IconTerminal2, IconBrandGit 
+  IconApi, IconBrandPython, IconTerminal2, IconBrandGit, IconBrandTypescript,
 }
   from "@tabler/icons-react";
 
@@ -76,6 +76,10 @@ const TAB_DATA: TabData[] = [
               <IconBrandPython stroke={1.5} color="white" size={22} />
               <span className="ml-2">Python</span>
             </li>
+            <li className="flex items-center space-x-2">
+              <IconBrandTypescript stroke={1.5} color="#0390fc" size={22} />
+              <span className="ml-2">Typescript</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -138,14 +142,10 @@ const TAB_DATA: TabData[] = [
               <IconBrandUnity stroke={1.5} color="white" size={22} />
               <span className="ml-2">Unity Game Engine</span>
             </li>
-            {/* <li className="flex items-center space-x-2">
-              <IconBrandTailwind stroke={1.5} color="#3898ff" size={22} />
-              <span className="ml-2">Tailwind CSS</span>
-            </li>
             <li className="flex items-center space-x-2">
-              <IconBrandNodejs stroke={1.5} color="#7fe34d" size={22} />
-              <span className="ml-2">Node.js</span>
-            </li> */}
+              <IconBrandNextjs stroke={1.5} color="white" size={22} />
+              <span className="ml-2">Next.js</span>
+            </li>
           </ul>
         </div>
       </div>
