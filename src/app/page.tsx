@@ -9,9 +9,9 @@ import { AuroraBackground } from "./components/AuroraBackground";
 
 export default function Home() {
   return (
-    <div className="bg-[#171717]">
+    <div className="bg-[#171717] overflow-hidden">
       <Navbar />
-        <main className="relative flex flex-col min-h-screen">
+        <main className="relative flex flex-col min-h-screen w-full bg-[#171717]">
           <AuroraBackground>
           <div className="container mx-auto px-12 py-28 relative z-10">
           

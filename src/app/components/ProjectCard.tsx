@@ -12,7 +12,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl }) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-[#faf3ed] relative group/card border-black/[0.1] w-[28rem] h-auto sm:w-[28rem] sm:h-auto rounded-lg p-6 border">
+      <CardBody className="bg-[#faf3ed] relative group/card border-black/[0.1] w-[22rem] h-auto sm:w-[28rem] h-auto rounded-lg p-6 border">
         <CardItem
           translateZ="40"
           className="text-xl font-semibold text-black"

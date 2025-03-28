@@ -37,7 +37,7 @@ const ContactSection = () => {
                 <GlobeComponent />
             </div>
             <div>
-                <form className="flex flex-col my-20" onSubmit={handleSubmit}>
+                <form className="flex flex-col my-20 mx-10 sm:mx-5" onSubmit={handleSubmit}>
                     <div className="mb-6">
                         <label
                             htmlFor="name"
