@@ -15,25 +15,25 @@ export const Navbar = ({ className }: { className?: string }) => {
     {
       name: "Home",
       link: "#home", // Scroll to the Home section
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHome className="h-4 w-4 text-neutral-500" />,
       isScroll: true,
     },
     {
       name: "About",
       link: "#about", // Scroll to the About section
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconUser className="h-4 w-4 text-neutral-500 " />,
       isScroll: true,
   },
     {
       name: "Projects",
       link: "#projects",
-      icon: <IconLayersSubtract className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconLayersSubtract className="h-4 w-4 text-neutral-500 " />,
       isScroll: true,
     },
     {
       name: "Contact",
       link: "#contact",
-      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconMessage className="h-4 w-4 text-neutral-500" />,
       isScroll: true,
     },
   ];
