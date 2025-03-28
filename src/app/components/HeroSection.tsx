@@ -48,7 +48,7 @@ function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="col-span-2 place-self-center mt-4 lg:mt-0 relative">
+        <div className="col-span-2 place-self-center mt-4 lg:mt-0 relative pt-10">
           <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]">
             <Image
               src={"/imgs/panda.gif"}
