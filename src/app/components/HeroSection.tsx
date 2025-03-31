@@ -23,7 +23,6 @@ import { IconBrandGithub, IconBrandLinkedinFilled } from "@tabler/icons-react";
   repeat={Infinity}
 />
 
-
 function HeroSection() {
   return (
     <section className="lg:py-1">
