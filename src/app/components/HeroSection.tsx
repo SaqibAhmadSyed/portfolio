@@ -6,23 +6,6 @@ import { TypeAnimation } from "react-type-animation";
 import DownloadButton from "./DownloadButton";
 import { IconBrandGithub, IconBrandLinkedinFilled } from "@tabler/icons-react";
 
-
-<TypeAnimation
-  sequence={[
-    'Qibber',
-    1000,
-    'Nigqib',
-    1000,
-    'Saqueef',
-    1000,
-    'Queefqib',
-    1000
-  ]}
-  wrapper="span"
-  speed={50}
-  repeat={Infinity}
-/>
-
 function HeroSection() {
   return (
     <section className="lg:py-1">
