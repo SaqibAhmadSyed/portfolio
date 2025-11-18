@@ -85,20 +85,23 @@ const TAB_DATA: TabData[] = [
       </div>
     ),
   },
-  {
-    title: "Education",
-    id: "education",
-    content: (      
+{
+  title: "Education",
+  id: "education",
+  content: (
+    <>
       <div>
-        <h3 className="text-lg font-semibold">Computer Science and Tecnhology (DEC)</h3>
+        <h3 className="text-lg font-semibold">Computer Science and Technology (DEC)</h3>
         <p>Vanier College, 2024</p>
       </div>
+
       <div>
         <h3 className="text-lg font-semibold">Computer Science (Bachelors)</h3>
         <p>Concordia University, 2027</p>
       </div>
-    ),
-  },
+    </>
+  ),
+},
   {
     title: "Course Taken",
     id: "course",
