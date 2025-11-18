@@ -93,6 +93,10 @@ const TAB_DATA: TabData[] = [
         <h3 className="text-lg font-semibold">Computer Science and Tecnhology (DEC)</h3>
         <p>Vanier College, 2024</p>
       </div>
+      <div>
+        <h3 className="text-lg font-semibold">Computer Science (Bachelors)</h3>
+        <p>Concordia University, 2027</p>
+      </div>
     ),
   },
   {
@@ -176,14 +180,11 @@ const AboutSection: React.FC = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full py-5">
           <h2 className="text-4xl font-bold text-white mb-4 ">About Me</h2>
           <p className="text-base lg:text-lg">
-            A recent Computer Science graduate with a strong passion for cybersecurity and Software Development.
-            My academic journey has equipped me with
-            a solid foundation in network security, programming and ethical hacking.
-            I have a strong foundation in network security, programming, and ethical hacking. I am passionate about building secure systems,
-            solving problems, and understanding the intricacies of software development to create efficient and reliable applications.
-            Throughout my journey in college, I went through many challenges and I had the opportunity
-            to have on hands unique experience such as pentesting, build web apps, create various softwares, etc.
-            I am excited to contribute my skills to a dynamic environment where I can make a meaningful impact.
+            I am a student currently pursuing my Bachelor of Computer Science, building on top of an Associate Degree in Computer Science.
+            My background has given me a strong base in programming, system design, and security-focused development. I enjoy creating practical, efficient applications and understanding how systems work under the hood.
+            Throughout my studies, I’ve worked on projects ranging from web applications to security-oriented tools, always aiming to write clean, reliable, and maintainable code.
+            I am driven by problem-solving, continuous learning, and the challenge of turning ideas into real, functional software.
+            I am working toward a career where I can build impactful solutions, expand my expertise, and grow as a developer in a dynamic, fast-moving environment.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
